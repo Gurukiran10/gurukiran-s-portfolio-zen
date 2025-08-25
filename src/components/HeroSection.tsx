@@ -89,23 +89,19 @@ export const HeroSection = () => {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="relative"
               >
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary-foreground/20 to-accent/20 flex items-center justify-center backdrop-blur-sm border border-primary-foreground/20">
-                  <User className="w-32 h-32 text-primary-foreground/40" />
+                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-2">
+                  <img 
+                    src="https://drive.google.com/uc?export=view&id=1VUnP9R4MkDQ7GGkRVc5Qbb3_KB3Vqt4y"
+                    alt="Gurukiran S - Profile Photo"
+                    className="w-full h-full rounded-full object-cover shadow-2xl"
+                    loading="eager"
+                  />
                 </div>
                 
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full animate-pulse-subtle"></div>
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary-foreground/40 rounded-full animate-pulse-subtle" style={{ animationDelay: "1s" }}></div>
               </motion.div>
-              
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 }}
-                className="text-center mt-4 text-primary-foreground/60 text-sm"
-              >
-                Update Photo
-              </motion.p>
             </div>
           </motion.div>
         </div>

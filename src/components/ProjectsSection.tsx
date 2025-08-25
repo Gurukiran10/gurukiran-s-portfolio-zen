@@ -7,25 +7,25 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "AirSync — Real-Time Distance-Constrained Dual Drone Coordination",
+    title: "AirSync — Drone Coordination",
     status: "In Progress",
-    description: "Python-based system to synchronize two drones while maintaining safe inter-drone distance; control algorithms and safety mechanisms to avoid collisions.",
+    description: "Python-based drone synchronization with distance constraints, control algorithms, and safety protocols.",
     longDescription: "Advanced drone coordination system implementing real-time communication protocols, GPS-based positioning, and machine learning algorithms for predictive collision avoidance. Features autonomous flight path optimization and emergency response protocols.",
-    tags: ["Python", "Computer Vision", "Machine Learning", "IoT", "Real-time Systems"]
+    tags: ["Python", "Control Systems", "Algorithms", "IoT"]
   },
   {
     title: "Patient Queue & Appointment System",
     status: "Completed",
-    description: "Full-stack app with secure auth, dynamic queues, automated scheduling, and integrated feedback/query modules for smooth multi-user workflows.",
+    description: "Full-stack application with secure login, queue management, scheduling, feedback, and queries.",
     longDescription: "Comprehensive healthcare management platform built with modern web technologies. Implements role-based authentication, real-time queue updates, automated notification systems, and comprehensive analytics dashboard for healthcare providers.",
-    tags: ["Full-Stack", "Authentication", "Real-time", "Database Design", "API Development"]
+    tags: ["Full-Stack", "Authentication", "Database", "React"]
   },
   {
     title: "E-Commerce Platform",
     status: "Completed", 
-    description: "Modular web app with authentication, product catalog, cart management, and a reliable backend designed for scalability and debuggability.",
+    description: "Modular web app with product catalog, cart, authentication, and reliable backend.",
     longDescription: "Enterprise-grade e-commerce solution featuring microservices architecture, advanced search capabilities, payment gateway integration, inventory management, and comprehensive admin panel with analytics and reporting features.",
-    tags: ["E-Commerce", "Microservices", "Payment Integration", "Scalable Architecture", "Admin Panel"]
+    tags: ["E-commerce", "Node.js", "Database", "API"]
   }
 ];
 

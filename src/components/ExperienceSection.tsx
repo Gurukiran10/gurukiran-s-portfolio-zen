@@ -1,25 +1,30 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Trophy, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { GraduationCap, Trophy, Briefcase, ExternalLink } from "lucide-react";
 
 const experiences = [
   {
     title: "Academic Projects",
+    organization: "BITM",
+    period: "2022 - Present",
     description: "Practical experience through end-to-end builds and teamwork",
-    icon: <GraduationCap className="h-6 w-6" />,
-    type: "academic"
+    type: "education" as const
   },
   {
     title: "IIT Madras Hackathon",
-    description: "Hackathon Participation",
-    icon: <Trophy className="h-6 w-6" />,
-    type: "competition"
+    organization: "IIT Madras",
+    period: "2024",
+    description: "Participated in competitive programming and innovation challenges",
+    type: "achievement" as const,
+    certificate: "https://drive.google.com/file/d/1ABC123/view"
   },
   {
-    title: "BITM Intra-College TechFest 2025", 
-    description: "Hackathon Participation",
-    icon: <Trophy className="h-6 w-6" />,
-    type: "competition"
+    title: "BITM Intra-College TechFest 2025",
+    organization: "BITM",
+    period: "2025",
+    description: "Active participation in technical competitions and workshops",
+    type: "achievement" as const
   }
 ];
 
@@ -65,23 +70,36 @@ export const ExperienceSection = () => {
                   {/* Timeline dot */}
                   <div className="absolute left-6 top-6 w-4 h-4 bg-accent rounded-full border-4 border-background z-10 hidden md:block"></div>
                   
-                  <Card className="card-gradient card-hover md:ml-20">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 p-3 rounded-full bg-accent/10 text-accent">
-                          {experience.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold mb-2">
-                            {experience.title}
-                          </h3>
-                          <p className="text-muted-foreground">
-                            {experience.description}
-                          </p>
-                        </div>
+                  <div className="p-6 rounded-lg bg-gradient-to-br from-background to-muted/30 border border-border/50 md:ml-20">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-semibold text-foreground">{experience.title}</h3>
+                        <p className="text-accent font-medium">{experience.organization}</p>
+                        <p className="text-sm text-muted-foreground">{experience.period}</p>
                       </div>
-                    </CardContent>
-                  </Card>
+                      <div className={`p-2 rounded-full ${
+                        experience.type === 'education' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'
+                      }`}>
+                        {experience.type === 'education' ? (
+                          <GraduationCap className="h-5 w-5" />
+                        ) : (
+                          <Trophy className="h-5 w-5" />
+                        )}
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground mb-4">{experience.description}</p>
+                    {'certificate' in experience && experience.certificate && (
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        onClick={() => window.open(experience.certificate, '_blank')}
+                        className="text-primary hover:text-primary-foreground"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Certificate
+                      </Button>
+                    )}
+                  </div>
                 </motion.div>
               ))}
             </div>

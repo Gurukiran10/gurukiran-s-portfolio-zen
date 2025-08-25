@@ -5,26 +5,26 @@ import { GraduationCap, Award } from "lucide-react";
 
 const education = [
   {
-    degree: "B.E. in Artificial Intelligence & Machine Learning",
-    institution: "BITM, Ballari",
+    degree: "B.E. AIML",
+    institution: "BITM",
     period: "2022–2026",
     grade: "CGPA: 8.17",
     type: "undergraduate",
     icon: <GraduationCap className="h-6 w-6" />
   },
   {
-    degree: "Pre-University (12th)",
-    institution: "Mahesh PU College, Ballari", 
+    degree: "Pre-University",
+    institution: "Mahesh PU College", 
     period: "2021–2022",
-    grade: "Percentage: 83.5%",
+    grade: "83.5%",
     type: "higher-secondary",
     icon: <Award className="h-6 w-6" />
   },
   {
-    degree: "Secondary (10th)",
-    institution: "Govt PU College, Turuvanoor",
+    degree: "Secondary",
+    institution: "Govt PU College",
     period: "2020",
-    grade: "Percentage: 81.44%",
+    grade: "81.44%",
     type: "secondary",
     icon: <Award className="h-6 w-6" />
   }
